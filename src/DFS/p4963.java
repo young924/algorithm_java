@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// 섬의 개수
+
 public class p4963 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

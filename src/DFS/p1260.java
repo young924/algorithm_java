@@ -3,6 +3,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+// DFS와 BFS
+
 public class p1260 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -11,7 +13,7 @@ public class p1260 {
         int M = sc.nextInt();
         int V = sc.nextInt();
 
-        Graph graph = new Graph(N);
+        Graph1260 graph = new Graph1260(N);
 
         for (int i = 0; i < M; i++) {
             int n1 = sc.nextInt();
@@ -26,12 +28,12 @@ public class p1260 {
     }
 }
 
-class Graph {
+class Graph1260 {
     private int nN;
     private int[][] graph;
     private boolean[] visited;
 
-    public Graph(int nN) {
+    public Graph1260(int nN) {
         this.nN = nN;
         this.graph = new int[nN+1][nN+1];
         this.visited = new boolean[nN+1];

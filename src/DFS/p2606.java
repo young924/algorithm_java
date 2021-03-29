@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// 바이러스
+
 public class p2606 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
