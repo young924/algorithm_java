@@ -1,16 +1,9 @@
 import java.util.ArrayList;
-<<<<<<< HEAD
 import java.util.Collections;
 import java.util.Scanner;
 
 // 영역 구하기
 
-=======
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Scanner;
-
->>>>>>> origin/master
 public class p2583 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
