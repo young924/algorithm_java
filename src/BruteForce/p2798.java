@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// 블랙잭
+
 public class p2798 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

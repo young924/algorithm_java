@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// 분해합
+
 public class p2231 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
