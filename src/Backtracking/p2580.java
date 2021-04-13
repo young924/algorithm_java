@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// 스도쿠
+
 public class p2580 {
     public static int[][] board = new int[9][9];
     public static ArrayList<Node> zeroList = new ArrayList<>();

@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// N과 M (1)
+
 public class p15649 {
     public static int[] arr;
     public static boolean[] visited;

@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// N과 M (3)
+
 public class p15651 {
     public static int[] arr;
     public static int N, M;

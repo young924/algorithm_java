@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// N-Queen
+
 public class p9663 {
     public static int[] board;
     public static int N;
