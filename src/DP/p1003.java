@@ -1,6 +1,8 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+// 피보나치 함수
+
 public class p1003 {
     public static int T;
     public static int[] fib0 = new int[50];
