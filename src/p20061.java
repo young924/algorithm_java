@@ -27,9 +27,9 @@ public class p20061 {
             // printBoard();
 
             // 2. 꽉 찬 줄 비우기
-            while (eraseGreen()) { }
+            eraseGreen();
 
-            while (eraseBlue()) { }
+            eraseBlue();
 
             // printBoard();
 
@@ -39,9 +39,6 @@ public class p20061 {
             handleLight();
 
             // printBoard();
-
-
-
         }
 
         System.out.println(score);
@@ -148,61 +145,57 @@ public class p20061 {
         }
     }
 
-    public static boolean eraseGreen() {
+    public static void eraseGreen() {
         for (int i = 9; i > 3; i--) {
 
             boolean fullG = true;
 
-            for (int j = 0; j < 4; j++) {
-                if (!full[i][j]) {
-                    fullG = false;
-                    break;
-                }
-            }
-
-            if (fullG) {
-                for (int j = i; j > 3; j--) {
-                    for (int k = 0; k < 4; k++) {
-                        full[j][k] = full[j-1][k];
+            while (fullG) {
+                for (int j = 0; j < 4; j++) {
+                    if (!full[i][j]) {
+                        fullG = false;
+                        break;
                     }
                 }
 
-                score++;
-                return true;
+                if (fullG) {
+                    for (int j = i; j > 3; j--) {
+                        for (int k = 0; k < 4; k++) {
+                            full[j][k] = full[j-1][k];
+                        }
+                    }
+
+                    score++;
+                }
             }
 
         }
-
-        return false;
     }
 
-    public static boolean eraseBlue() {
+    public static void eraseBlue() {
         for (int i = 9; i > 3; i--) {
 
             boolean fullB = true;
 
-            for (int j = 0; j < 4; j++) {
-                if (!full[j][i]) {
-                    fullB = false;
-                    break;
-                }
-            }
-
-
-            if (fullB) {
-                for (int j = i; j > 3; j--) {
-                    for (int k = 0; k < 4; k++) {
-                        full[k][j] = full[k][j-1];
+            while (fullB) {
+                for (int j = 0; j < 4; j++) {
+                    if (!full[j][i]) {
+                        fullB = false;
+                        break;
                     }
                 }
-                score++;
 
-                return true;
+
+                if (fullB) {
+                    for (int j = i; j > 3; j--) {
+                        for (int k = 0; k < 4; k++) {
+                            full[k][j] = full[k][j-1];
+                        }
+                    }
+                    score++;
+                }
             }
-
         }
-
-        return false;
     }
 
     public static void handleLight() {
