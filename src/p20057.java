@@ -57,11 +57,14 @@ public class p20057 {
 
     public static void move(int distance) {
         for (int i = 1; i <= distance; i++) {
-
             // spread
+
+            int total = board[r][c];
+            board[r][c] = 0;
 
             r += dX[dir];
             c += dY[dir];
+
 
         }
     }
