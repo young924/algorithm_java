@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/BruteForce" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Backtracking" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/DP" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Simulation" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

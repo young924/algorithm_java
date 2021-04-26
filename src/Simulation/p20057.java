@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// 마법사 상어와 토네이도
+
 public class p20057 {
     public static int N;
     public static int[][] board;

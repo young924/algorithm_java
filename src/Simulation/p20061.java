@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// 모노미노도미노 2
+
 public class p20061 {
     static int N;
     static boolean[][] full;
