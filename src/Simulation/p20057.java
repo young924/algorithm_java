@@ -65,8 +65,19 @@ public class p20057 {
             board[r][c] = 0;
 
             r += dX[dir];
-            c += dY[dir];
+            c += dY[dir];       // y가 현재 좌표
+            board[r][c] += total;
 
+            int remainder = total;
+
+            for (int j = 0; j < 9; j++) {
+                int nX = r + wX[dir][j];
+                int nY = c + wY[dir][j];
+                board[nX][nY] += board[r][c] * percent[j];
+                remainder -= board[r][c] * percent[j];
+            }
+
+            board[r + dX[dir]][c + dY[dir]] += remainder;
 
         }
     }
