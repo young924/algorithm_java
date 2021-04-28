@@ -73,12 +73,21 @@ public class p20057 {
             for (int j = 0; j < 9; j++) {
                 int nX = r + wX[dir][j];
                 int nY = c + wY[dir][j];
-                board[nX][nY] += board[r][c] * percent[j];
-                remainder -= board[r][c] * percent[j];
+
+                if (nX >= 0 && nX < N && nY >= 0 && nY < N) {
+                    board[nX][nY] += board[r][c] * percent[j];
+                    remainder -= board[r][c] * ((double) percent[j] * 0.01);
+                }
             }
 
-            board[r + dX[dir]][c + dY[dir]] += remainder;
+            int aX = r + dX[dir];
+            int aY = c + dY[dir];
 
+            if (aX >= 0 && aX < N && aY >= 0 && aY < N) {
+                board[aX][aY] += remainder;
+            }
+
+            outSum += remainder;
         }
     }
 }
