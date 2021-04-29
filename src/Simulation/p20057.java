@@ -68,15 +68,15 @@ public class p20057 {
             c += dY[dir];       // y가 현재 좌표
             board[r][c] += total;
 
-            int remainder = total;
+            int remainder = board[r][c];
 
             for (int j = 0; j < 9; j++) {
                 int nX = r + wX[dir][j];
                 int nY = c + wY[dir][j];
 
                 if (nX >= 0 && nX < N && nY >= 0 && nY < N) {
-                    board[nX][nY] += board[r][c] * percent[j];
-                    remainder -= board[r][c] * ((double) percent[j] * 0.01);
+                    int amt = (int) Math.floor(board[r][c] * percent[j] * 0.01);
+                    board[nX][nY] += amt;
                 }
             }
 
@@ -85,9 +85,26 @@ public class p20057 {
 
             if (aX >= 0 && aX < N && aY >= 0 && aY < N) {
                 board[aX][aY] += remainder;
+                remainder = 0;
             }
 
+            board[r][c] = 0;
+
+            System.out.println(r+", "+c+" : " + remainder);
+
             outSum += remainder;
+
+            printBoard();
         }
+    }
+
+    public static void printBoard() {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                System.out.print(board[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
     }
 }
