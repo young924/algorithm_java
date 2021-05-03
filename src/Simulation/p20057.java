@@ -73,11 +73,13 @@ public class p20057 {
             for (int j = 0; j < 9; j++) {
                 int nX = r + wX[dir][j];
                 int nY = c + wY[dir][j];
+                int amt = (int) Math.floor(board[r][c] * percent[j] * 0.01);
+                remainder -= amt;
 
                 if (nX >= 0 && nX < N && nY >= 0 && nY < N) {
-                    int amt = (int) Math.floor(board[r][c] * percent[j] * 0.01);
                     board[nX][nY] += amt;
-                    remainder -= amt;
+                } else {
+                    outSum += amt;
                 }
             }
 
@@ -86,17 +88,11 @@ public class p20057 {
 
             if (aX >= 0 && aX < N && aY >= 0 && aY < N) {
                 board[aX][aY] += remainder;
-                remainder = 0;
-                printBoard();
+            } else {
+                outSum += remainder;
             }
-
+            
             board[r][c] = 0;
-
-            System.out.println(r+", "+c+" : " + remainder);
-
-            outSum += remainder;
-
-            printBoard();
         }
     }
 
