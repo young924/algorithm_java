@@ -86,6 +86,7 @@ public class p20057 {
             if (aX >= 0 && aX < N && aY >= 0 && aY < N) {
                 board[aX][aY] += remainder;
                 remainder = 0;
+                printBoard();
             }
 
             board[r][c] = 0;
