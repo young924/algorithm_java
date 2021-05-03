@@ -77,6 +77,7 @@ public class p20057 {
                 if (nX >= 0 && nX < N && nY >= 0 && nY < N) {
                     int amt = (int) Math.floor(board[r][c] * percent[j] * 0.01);
                     board[nX][nY] += amt;
+                    remainder -= amt;
                 }
             }
 
