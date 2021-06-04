@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// 큐 2
+// 큐 2 (배열을 이용하여 직접 구현)
 
 public class p18258_array {
     public static void main(String[] args) throws IOException {
