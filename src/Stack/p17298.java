@@ -12,6 +12,8 @@ public class p17298 {
 
         int N = Integer.parseInt(br.readLine());
         int[] arr = new int[N];
+        int[] stack = new int[N];
+        int top = 0;
 
         StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -19,14 +21,25 @@ public class p17298 {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        for (int i = 1; i <= N; i++) {
-            sb.append(getNGE(i)).append(" ");
+        stack[0] = 0;
+
+        for (int i = 1; i < N; i++) {
+            while (top >= 0 && arr[stack[top]] < arr[i]) {
+                arr[stack[top]] = arr[i];
+                top--;
+            }
+            top++;
+            stack[top] = i;
+        }
+
+        for (int i = top; i >= 0; i--) {
+            arr[stack[i]] = -1;
+        }
+
+        for (int i = 0; i < N; i++) {
+            sb.append(arr[i]).append(" ");
         }
 
         System.out.println(sb);
-    }
-
-    public static int getNGE(int n) {
-        return 0;
     }
 }
