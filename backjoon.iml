@@ -14,6 +14,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/Queue" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Stack" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Recursive" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/DivideAndConquer" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
