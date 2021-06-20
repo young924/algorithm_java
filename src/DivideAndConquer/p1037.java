@@ -12,8 +12,15 @@ public class p1037 {
         int N = Integer.parseInt(br.readLine());
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        for (int i = 0; i < N; i++) {
+        int min = Integer.MAX_VALUE;
+        int max = 1;
 
+        for (int i = 0; i < N; i++) {
+            int input = Integer.parseInt(st.nextToken());
+            if (input < min) min = input;
+            if (input > max) max = input;
         }
+
+        System.out.println(min * max);
     }
 }
