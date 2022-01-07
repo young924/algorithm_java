@@ -2,7 +2,7 @@
 Solve Backjoon Problems with Java  
    
 #### 📌 Number Theory
-1037,, 1934, 2609, 3036, 5086
+1037, 1934, 2609, 3036, 5086
 
 #### 📌 Recursive
 2447, 10870, 10872, 11729
