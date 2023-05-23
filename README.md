@@ -33,3 +33,6 @@ Solve Backjoon Problems with Java
 
 #### 📌 Divide & Conquer
 2630
+
+#### 📌 Segment Tree
+2042
